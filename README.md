@@ -40,8 +40,11 @@ It replaces following abbreviations:
 * f with frequency_domain_
 * Mag with _Magnitude
 
-It changes some spelling marks to make it easier to read long names.
+It changes some punctuation to simplify reading long names.
 
 ### data set with the average of each variable for each activity and each subject.
 
-From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+It uses melt()  with "activity" and "subject" as id variables, to get narrow tidy data.
+Then it uses dcast() with formula activity + subject ~ variable and functsion mean
+Result is dataframe with 180 rows and 81 columns. 
+
