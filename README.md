@@ -6,9 +6,9 @@ The script run_analysis.R does the following:
 
 ## Merges the training and the test sets to create one data set.
 I create three datasets by joining followed data pairs with rbind:
-  X_train.txt and X_test.txt  with column names at feature.txt
-  y_train.txt and y_test.txt  with column names "activity"
-  subject_train.txt and subject_test.txt with column names "subject"
+ * X_train.txt and X_test.txt  with column names at feature.txt
+ * y_train.txt and y_test.txt  with column names "activity"
+ * subject_train.txt and subject_test.txt with column names "subject"
 Finally, I merge theese three dataset with cbind and get single dataframe with 10228 rows and 81 columns  
 
 ## Extracts only the measurements on the mean and standard deviation for each measurement.
