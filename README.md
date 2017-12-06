@@ -10,8 +10,10 @@ It reads files with folowing adresses:
 * Dataset/activity_labels.txt as labels
 * Dataset/train/X_train.txt with column names at features
 * Dataset/test/X_test.txt with column names at features
-* Dataset/train/y_train.txt with column name "activity")
-* Dataset/test/y_test.txt with column name "activity"))
+* Dataset/train/y_train.txt with column name "activity"
+* Dataset/test/y_test.txt with column name "activity"
+* Dataset/train/subject_train.txt with column name "subject"
+* Dataset/test/subject_test.txt with column name "subject"
 
 It creates three datasets by joining followed data pairs with rbind:
  * X_train and X_test
@@ -24,14 +26,22 @@ Finally, it merges theese three dataset with cbind and get single dataframe with
 I choosed to treat meanFreq variables as mean variables.
 
 It selects all variables which contains "mean" or "std".
+
 Selected dataset contains 79 variabels with "mean" or "std" and variables "activity" and "subject".
 
 ### Uses descriptive activity names to name the activities in the data set
+It replaces variables "activity" values with activity names in "labels" using "activity" values as index in "labels".
 
+### Appropriately labels the data set with descriptive variable names.
+It replaces following abbreviations: 
+* Acc with  _Accelerometer
+* Gyro with _Gyroscope
+* t with time_domain_
+* f with frequency_domain_
+* Mag with _Magnitude
 
-Appropriately labels the data set with descriptive variable names.
+It changes some spelling marks to make it easier to read long names.
 
+### data set with the average of each variable for each activity and each subject.
 
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-
