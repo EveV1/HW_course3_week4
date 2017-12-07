@@ -45,6 +45,10 @@ It changes some punctuation to simplify reading long names.
 ### data set with the average of each variable for each activity and each subject.
 
 It uses melt()  with "activity" and "subject" as id variables, to get narrow tidy data.
+
 Then it uses dcast() with formula activity + subject ~ variable and functsion mean
 Result is dataframe with 180 rows and 81 columns. 
+
+Last row of code writes result dataframe to the file "dataset5.txt"
+
 
